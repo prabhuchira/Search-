@@ -7,19 +7,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <body>
         <!-- <h1>This is working i guess and</h1> -->
+        <style>
+            ul{
+                margin:0px;
+                padding:10px 10px;
+                
 
+            }
+            li{
+                border-style: none;
+                list-style: none;
+                padding: 10px 20px  !important;
+                background:lightblue;
+                margin:20px  !important;
+                
+
+            }
+        </style>
         <div class="container">
             <h2>Search</h2>
 
             <div >
-                <select class="form-control" type="text">
-                    <option >
-                        Windows
-                    </option>
-                </select>
+                
+                <input type="text" class="form-control" id="search" >
+            </div>
 
+            <div >
+            
+                <br>
                
-
+                <ul id="list">
+                    <li>
+                        Option
+                    </li>
+                </ul>
+            
+                <button id="submit">submit</button>
+                
 
             </div>
         </div>
