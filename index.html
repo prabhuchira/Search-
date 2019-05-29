@@ -10,7 +10,7 @@
         <style>
             ul{
                 margin:0px;
-                padding:10px 10px;
+                padding:0px 0px;
                 
 
             }
@@ -19,22 +19,23 @@
                 list-style: none;
                 padding: 10px 20px  !important;
                 background:lightblue;
-                margin:20px  !important;
+                margin:0px 10px  !important;
                 
 
             }
+
+            
         </style>
         <div class="container">
             <h2>Search</h2>
+            
 
-            <div >
-                
-                <input type="text" class="form-control" id="search" >
-            </div>
-
-            <div >
+            <div id="list-container">
             
                 <br>
+                <div >
+                        <input type="text" class="form-control" id="search" oninput="resetArray()">
+                    </div>
                
                 <ul id="list">
                     <li>
@@ -42,7 +43,7 @@
                     </li>
                 </ul>
             
-                <button id="submit">submit</button>
+              
                 
 
             </div>
