@@ -1,7 +1,9 @@
+
+
 console.log('I think its working')
 
 
-var array = ["google","firefox","firelone","chrome","internet explorer"]
+var array = ["google", "firefox", "firelone", "chrome", "internet explorer", "windows", "linux", "apple", "debian"]
 var submit = document.querySelector('#submit');
 var resultantArray = [];
 var list = document.getElementById('list')
@@ -12,74 +14,86 @@ var input = "fire"
 
 
 
-function getResult(input){
+function getResult(input) {
     input = input.toLowerCase();
-    array.forEach(cur=> {
-      
+    array.forEach(cur => {
+
         // console.log(uppercase);
-        if(cur.includes(input)){
-            
+        if (cur.includes(input)) {
+
             resultantArray.push(cur);
         }
-       
+
     });
-   
-   
+
+
 
 }
 
-    function resetArray(){
-        resultantArray = [];
-        document.querySelector('ul').remove()
+document.querySelector('body').addEventListener('click',()=>{
+    document.querySelector('ul').style.display = "none"
+}
+)
+
+
+
+function resetArray() {
+
+   
+    
+  
+    resultantArray = [];
+    document.querySelector('ul').remove()
+    var list = document.createElement('ul');
+    var listContainer = document.getElementById('list-container');
+    listContainer.appendChild(list);
+
+    // list.remove();
+    getResult(search.value);
+
+    for (var i = 0; i < resultantArray.length; i++) {
+
+        var self = i
+        var node = document.createElement('li');
+
+        var text = document.createTextNode(resultantArray[i]);
+
+
+        node.setAttribute('id', 'click-' + i);
+        console.log(i)
+
+
+        getValue(self, node)
         var list = document.createElement('ul');
-        var listContainer = document.getElementById('list-container');
-        listContainer.appendChild(list);
-        
-        // list.remove();
-        getResult(search.value);  
-     
-        for(var i=0;i<resultantArray.length;i++){
+        console.log(node)
+        node.appendChild(text);
 
-            var self = i
-            var node = document.createElement('li');
-          
-            var text = document.createTextNode(resultantArray[i]);
 
-         
-            node.setAttribute('id','click-' + i);
-            console.log(i)
-         
 
-                getValue(self,node)
-            console.log(node)
-            node.appendChild(text);
 
-            
-       
-           
-            document.querySelector('ul').appendChild(node);
-        
-            
-        }
-      
-      
-       
-        
-        
-       
+        document.querySelector('ul').appendChild(node);
+
+
     }
+  
+
+}
 
 
-    function getValue(something,element){
-        element.addEventListener('click',()=>{
-            console.log(document.getElementById('click-' +something ));
-        })
-    }
+function getValue(something, element) {
    
-   
-   function eventOccur(event){
-        console.log(event);
-    }
+    element.addEventListener('click', () => {
+        var value = document.getElementById('click-' + something).childNodes[0].data
+        console.log(document.getElementById('click-' + something).childNodes[0].data);
+        search.value = value;
+        document.getElementById('main-heading').innerText = value;
+    })
+    
+}
 
 
- 
+function eventOccur(event) {
+    console.log(event);
+}
+
+
