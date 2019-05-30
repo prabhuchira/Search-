@@ -7,7 +7,8 @@ body {
   font-size: -webkit-xxx-large;
   text-align: center;
   background: rgb(255, 255, 255);
-  color: #886b6b
+  color: #886b6b;
+  padding-bottom:0px !important
 }
 
 blockquote{
@@ -34,3 +35,42 @@ i{
 }
 
 
+
+
+ul{
+  margin:0px;
+  padding:0px 0px;
+  box-shadow:1px 1px 2px grey;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+}
+
+
+.sample{
+  height:50px;
+}
+.styling{
+  width: 100%;
+  font-size: -webkit-xxx-large;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  color: #886b6b
+}
+
+
+li{
+  border-style: none;
+  list-style: none;
+  padding: 10px 20px  !important;
+  background:rgba(224, 213, 213, 0.2);
+  /* margin:0px 10px  !important; */
+  color:#717980;
+
+  
+
+}
+
+li:hover{
+  background:rgba(224, 213, 213, 0.801);
+  color:rgba(121, 74, 74, 0.801)
+}
