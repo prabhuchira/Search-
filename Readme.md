@@ -1,0 +1,1 @@
+This is an search engine which comprises of HTML,Javascript and CSS But not Jquery. It is light in weight comparing to other search engines.
