@@ -1,0 +1,36 @@
+body {
+    margin-top:40px
+} 
+
+.styling{
+  width: 100%;
+  font-size: -webkit-xxx-large;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  color: #886b6b
+}
+
+blockquote{
+  font-size:20px;
+  color: #a5998a;
+  animation-name:slideIn;
+  animation-duration: 2s;
+}
+
+@keyframes slideIn{
+  from { opacity: 0; }
+  to { opacity: 1;}
+}
+
+
+i{
+  font-size:72px;
+}
+
+.material-icons{
+  font-size: 60px;
+  position: relative;
+  top: 12px;
+}
+
+
